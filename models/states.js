@@ -12,3 +12,5 @@ module.exports = (sequelize, DataTypes) => {
   };
   return States;
 };
+
+    //fix the errors
