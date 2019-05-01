@@ -20,7 +20,7 @@ router.get('/states/:name',function(req,res,next){
                 return res.status(404).send()
             }
         })
-        .catch(err=>next (err))
+        .catch(err=>next(err))
 })
 
 router.patch('/state/:name',function (req,res,next) {
