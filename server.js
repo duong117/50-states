@@ -5,6 +5,8 @@ var path=require('path')
 
 var app=express()
 
+/*Tell the server.js to serve the Vue app*/
+
 app.use(express.static(path.join(__dirname,'client','dist')))
 
 app.use(bodyParser.json())

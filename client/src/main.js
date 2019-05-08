@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.prototype.$stateService=StateAPIService
-
+/* add css for Leaflet*/
 import "leaflet/dist/leaflet.css"
 
 new Vue({

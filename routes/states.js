@@ -10,6 +10,7 @@ router.get('/states',function (req,res,next) {
         })
         .catch(err=>next(err))
 })
+/*Create a route to handle the request to /states/:name*/
 
 router.get('/states/:name',function(req,res,next){
     States.findOne({where:{name:req.params.name}})
