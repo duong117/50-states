@@ -4,6 +4,7 @@
         <p v-if ="state.visited">You have visited this state</p>
         <p v-else>You have not visited this state</p>
 
+        <!--add I-map component, v-bind to vue data to set Leaflet properties-->
         <div id="map-container">
             <l-map
                 ref="stateMap"
@@ -28,6 +29,7 @@
                 state:{
                     name:''
                 },
+                /*this code is to set the map to the center*/
                 url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
                 zoom:2,
                 center:[44,-103],
@@ -39,7 +41,7 @@
             this.$refs.stateMap.mapObject.dragging.disable()
             this.fetchStateData()
         },
-
+        /*this method to overwrite state object with data response from server*/
         methods:{
             fetchStateData(){
                 this.$stateService.getOne(this.state.name).then(data=>{
