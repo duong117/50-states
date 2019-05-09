@@ -6,7 +6,7 @@ export default {
             return response.data
         })
     },
-
+    /* this function is to send a patch request, which will be handled by the route you just created */
     setVisited(stateName,visited){
         return axios.patch('/api/state/'+stateName,{visited:visited}).then(response=>{
             return response.data
