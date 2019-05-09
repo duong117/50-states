@@ -11,7 +11,8 @@ router.get('/states',function (req,res,next) {
         .catch(err=>next(err))
 })
 /*Create a route to handle the request to /states/:name*/
-
+/*create 404 message in the state is not in databae*/
+/*'Next' to send errors to the error handlers*/
 router.get('/states/:name',function(req,res,next){
     States.findOne({where:{name:req.params.name}})
         .then(state=>{
